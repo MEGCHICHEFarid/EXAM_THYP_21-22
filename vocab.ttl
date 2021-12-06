@@ -15,13 +15,12 @@
 
 news:auteur a rdfs:Class ;
     rdfs:label "Auteur" ;
-    rdfs:comment "Auteur de l'article"
-    rdfs:domain o:Resource ;   
+    rdfs:comment "Auteur de l'article" ;
     vs:term_status "experimental" .
 
 news:infos a rdf:Property ;
     rdfs:label "Infos" ;
-    rdfs:comment "Infos sur l'auteur de l'article"
+    rdfs:comment "Infos sur l'auteur de l'article" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
