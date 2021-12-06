@@ -8,14 +8,14 @@
          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet"
          href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" >
-        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
 	</head>
 <body>
     <div class="jumbotron mb-0" style="background-color:#df0000 !important">
       
         <center>
               <h1 class="display-3">Examen THYP du 6 décembre 2021</h1>
-              <h2>THYP_promo_2021-2022</h2> 
+              <h2>Farid MEGCHICHE</h2> 
         </center>
    
           </div>
@@ -43,7 +43,7 @@ getData();
 
     function getData() 
     {
-     let url ='https://polemika.univ-paris8.fr/omk/api/items?item_set_id=2'; */
+     let url ='https://polemika.univ-paris8.fr/omk/api/items?item_set_id=2';
     var csv_data;          
     var q = d3.queue()
         .defer(d3.json, url)
