@@ -1,53 +1,61 @@
+
+
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix o: <http://omeka.org/s/vocabs/o#> .
-@prefix news: <https://duraspace.org/wp-content/uploads/2020/02/vivo.owl#News> .
-@prefix teach: <http://linkedscience.org/teach/ns#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix schema: <http://schema.org/>.
+@prefix news: <https://MEGCHICHEFarid.github.io/EXAM_THYP_21-22/vocab.ttl#> .
 
-<https://github.com/MEGCHICHEFARID/EXAM_THYP_21-22/blob/main/onto/onto#> a owl:Ontology ;
-    dcterms:title "News_Examen" .
 
-news:auteur  a rdfs:Class ;
+<https://MEGCHICHEFarid.github.io/EXAM_THYP_21-22/vocab.ttl#> a owl:Ontology ;
+    dcterms:title "News" .
+
+news:auteur a rdfs:Class ;
     rdfs:label "Auteur" ;
-    owl:sameAs foaf:Person ;
+    rdfs:comment "Auteur de l'article"
+    rdfs:domain o:Resource ;   
     vs:term_status "experimental" .
 
-news:infos  a rdf:Property;
+news:infos a rdf:Property ;
     rdfs:label "Infos" ;
-    rdfs:comment "des infos sur l'auteur de l'article"
-    owl:sameAs foaf:Person ;
+    rdfs:comment "Infos sur l'auteur de l'article"
+    rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
 
 news:news a rdfs:Class ;
     rdfs:label "News" ;
-    owl:sameAs foaf:Person ;
+    rdfs:subject o:Resource ;
+    owl:sameAs foaf:Person ;    
     vs:term_status "experimental" .
-
+    
 
 news:titre a rdf:Property ;
     rdfs:label "Titre" ;
+    rdfs:comment "le titre de l'article" ;
     rdfs:domain o:Resource ;
-    vs:term_status "experimental" .
+    rdfs:isDefinedBy news: . 
 
 news:sujet a rdf:Property ;
-    rdfs:label "sujet" ;
-    rdfs:comment "Le sujet sur quoi l'article parle"
+    rdfs:label "Sujet" ;
+    rdfs:comment "le sujet sur quoi l'article parle" ;
     rdfs:domain o:Resource ;
-    vs:term_status "experimental" .
+    rdfs:isDefinedBy news: . 
 
 news:reference a rdf:Property ;
     rdfs:label "Reference" ;
+    rdfs:comment "La reference de l'article" ;
     rdfs:domain o:Resource ;
-    vs:term_status "experimental" .
-
+    rdfs:isDefinedBy news: . 
+    
 news:nbvisiteur a rdf:Property ;
     rdfs:label "Nbvisiteur" ;
-    rdfs:comment "nombre de visiteurs de cet article"
+    rdfs:comment "nombre de visiteurs de l'article" ;
     rdfs:domain o:Resource ;
-    vs:term_status "experimental" .
+    rdfs:isDefinedBy news: .
+
+    
+  
